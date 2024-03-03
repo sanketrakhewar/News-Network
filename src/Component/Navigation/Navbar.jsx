@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css";
-import logo from "../../Assets/bitcoin.png";
-
 function Navbar({ setCategory }) {
   return (
     <>
@@ -10,16 +8,9 @@ function Navbar({ setCategory }) {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img
-              className="mx-2"
-              src={logo}
-              alt="Crypto News Network"
-              width="30"
-              height="24"
-            ></img>
-            <span className="badge bg-light text-dark fs-5">
-              Crypto News Network
+          <a className="navbar-brand" onClick={() => setCategory("general")}>
+            <span className="badge bg-light text-dark fs-5 px-3">
+              News Network
             </span>
           </a>
 
@@ -38,7 +29,7 @@ function Navbar({ setCategory }) {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <div
-                  className="nav-link"
+                  className="nav-link px-3"
                   onClick={() => setCategory("technology")}
                 >
                   Technology
@@ -46,25 +37,31 @@ function Navbar({ setCategory }) {
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
+                  className="nav-link px-3"
                   onClick={() => setCategory("business")}
                 >
                   Business
                 </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link" onClick={() => setCategory("health")}>
+                <div
+                  className="nav-link px-3"
+                  onClick={() => setCategory("health")}
+                >
                   Health
                 </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link" onClick={() => setCategory("sports")}>
+                <div
+                  className="nav-link px-3"
+                  onClick={() => setCategory("sports")}
+                >
                   Sports
                 </div>
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
+                  className="nav-link px-3"
                   onClick={() => setCategory("entertainment")}
                 >
                   Entertainment

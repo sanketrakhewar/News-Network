@@ -21,7 +21,7 @@ const NewsBoard = ({ category }) => {
         return (
           <NewsItem
             key={index}
-            tittle={news.title}
+            title={news.title}
             description={news.description}
             src={news.urlToImage}
             url={news.url}

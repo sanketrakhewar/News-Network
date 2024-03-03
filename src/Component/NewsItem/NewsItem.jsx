@@ -14,14 +14,14 @@ const NewsItem = ({ title, description, src, url }) => {
         alt={src}
       ></img>
       <div className="card-body">
-        <h5 className="card-title">{title}</h5>
+        <h4 className="card-title">{title.slice(0, 60)}</h4>
         <p className="card-text">
           {description
-            ? description
+            ? description.slice(0, 120)
             : "News is About Current Event. It is information about Something That Just Happended."}
         </p>
         <a href={url} className="btn btn-primary" target="_blank">
-          Read More...
+          Read More..
         </a>
       </div>
     </div>
