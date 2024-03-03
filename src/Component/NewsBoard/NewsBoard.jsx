@@ -6,11 +6,12 @@ const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    let url = ` https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=c9f4cfb99b084762907ef8fb7c2a7fbc`;
+    let url = ` https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.REACT_APP_API_KEY}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles));
   }, [category]);
+  //${import.meta.env.NEWS_API_KEY}
 
   return (
     <div>
