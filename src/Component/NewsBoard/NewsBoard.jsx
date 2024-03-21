@@ -26,7 +26,11 @@ const NewsBoard = ({ category }) => {
             description={news.description}
             src={news.urlToImage}
             url={news.url}
-          ></NewsItem>
+            author={news.author}
+            publishedAt={news.publishedAt}
+            country={news.country}
+            language={news.language}
+          />
         );
       })}
     </div>

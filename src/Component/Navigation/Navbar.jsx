@@ -8,11 +8,11 @@ function Navbar({ setCategory }) {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" onClick={() => setCategory("general")}>
+          <span className="navbar-brand" onClick={() => setCategory("general")}>
             <span className="badge bg-light text-dark fs-5 px-3">
               News Network
             </span>
-          </a>
+          </span>
 
           <button
             className="navbar-toggler"
